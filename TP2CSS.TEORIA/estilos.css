@@ -1,0 +1,24 @@
+a:link {
+    color: darkgreen;
+    font-weight: bold;
+}
+
+
+a:visited {
+    color: orange; /*color elegido naranj para notar la diferencia cuando pasas el mouse por encima*/
+    font-weight: bold;
+}
+
+
+a:hover {
+    color: red;
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+a:active {
+    color: blue;
+    font-weight: bold;
+    font-size: 2em; 
+}
