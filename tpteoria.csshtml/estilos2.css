@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ddd; 
+}
+
+#top {
+    width: 1300px;           
+    height: 80px;
+    background-color: #555;
+    color: white;
+    line-height: 80px;
+    margin: 10px auto;      
+}
+
+#contenido {
+    overflow: auto; 
+    width: 1300px;
+    margin: auto;
+}
+
+#Izq {
+    float: left;
+    width: 100px;
+    height: 400px;        
+    background-color: #555;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    margin-left: 10px;      
+}
+
+#center {
+    float: left;
+    width: 540px;
+    height: 400px;
+    background-color: #555;
+    color: white;
+    line-height: 200px;
+    margin-left: 10px;  
+        
+}
+
+#Pie {
+    border: 10px;
+    border-color: white;
+    border-style: solid;
+    background-color: gray;
+    height: 500px;
+    
+}
