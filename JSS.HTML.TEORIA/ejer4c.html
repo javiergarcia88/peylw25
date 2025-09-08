@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejer4c</title>
+</head>
+<body>
+  <script>
+    
+    let nom = prompt("Ingrese su nombre");
+    let ape = prompt("Ingrese su apellido");
+    let edad = prompt("Ingrese su edad");
+
+    
+    let confirmar = confirm("¿Desea mostrar sus datos personales en la página?");
+
+    if (confirmar) {
+      document.write("<h2>Datos Personales</h2>");
+      document.write("Nombre: " + nom + "<br>");
+      document.write("Apellido: " + ape + "<br>");
+      document.write("Edad: " + edad + "<br>");
+      alert("Sus datos han sido impresos");
+    } else {
+      alert("Operación cancelada, no se mostraron los datos");
+    }
+  </script>  
+</body>
+</html>
+  
