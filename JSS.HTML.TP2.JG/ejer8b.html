@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 8b</title>
+    <script>
+        function toggleCiudades(idProv, idCiudades) {
+            let ciudades = document.getElementById(idCiudades);
+            let provincia = document.getElementById(idProv);
+
+            if (ciudades.style.display === "none") {
+                ciudades.style.display = "block";    
+                provincia.style.textDecoration = ""; 
+            } else {
+                ciudades.style.display = "none";    
+                provincia.style.textDecoration = "underline"; 
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>
+            <span id="nqn">Neuquén</span>
+            <button onclick="toggleCiudades('nqn','ciudadesNqn')">-</button>
+            <ul id="ciudadesNqn">
+                <li>Neuquén</li>
+                <li>Zapala</li>
+                <li>San Martín</li>
+                <li>Junín</li>
+            </ul>
+        </li>
+
+        <li>
+            <span id="rn">Río Negro</span>
+            <button onclick="toggleCiudades('rn','ciudadesRN')">-</button>
+            <ul id="ciudadesRN">
+                <li>Cipolletti</li>
+                <li>Fernández Oro</li>
+                <li>Roca</li>
+                <li>Cinco Saltos</li>
+                <li>Allen</li>
+            </ul>
+        </li>
+
+        <li>
+            <span id="bsas">Buenos Aires</span>
+            <button onclick="toggleCiudades('bsas','ciudadesBsAs')">-</button>
+            <ul id="ciudadesBsAs">
+                <li>La Plata</li>
+                <li>Mar del Plata</li>
+                <li>Necochea</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

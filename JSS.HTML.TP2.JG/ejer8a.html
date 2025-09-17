@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejercicio 8a</title>
+  <style>
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 10px;
+      margin: 5px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      width: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <p>Pasa el mouse por encima de los ítems:</p>
+
+  <ul>
+    <li onmouseover="cambiarFondo(this, 'white')"   onmouseout="resetearFondo(this)">Blanco</li>
+    <li onmouseover="cambiarFondo(this, 'black')"   onmouseout="resetearFondo(this)">Negro</li>
+    <li onmouseover="cambiarFondo(this, 'blue')"    onmouseout="resetearFondo(this)">Azul</li>
+    <li onmouseover="cambiarFondo(this, 'red')"     onmouseout="resetearFondo(this)">Rojo</li>
+    <li onmouseover="cambiarFondo(this, 'yellow')"  onmouseout="resetearFondo(this)">Amarillo</li>
+  </ul>
+
+  <script>
+    function cambiarFondo(elemento, color) {
+      elemento.style.backgroundColor = color;
+    }
+
+    function resetearFondo(elemento) {
+      elemento.style.backgroundColor = "";
+    }
+  </script>
+</body>
+</html>

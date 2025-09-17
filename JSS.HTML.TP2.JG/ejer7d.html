@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7d</title>
+    <script>
+        
+        function factorial(n) {
+            if (n === 0) return 1;
+            return n * factorial(n - 1);
+        }
+
+        function mostrarFactoriales() {
+            let salida = "";
+            for (let i = 0; i <= 10; i++) { 
+                salida += `Factorial de ${i} = ${factorial(i)} <br>`;
+            }
+            document.getElementById("resultado").innerHTML = salida;
+        }
+    </script>
+</head>
+<body onload="mostrarFactoriales()">
+    <h1>Factoriales</h1>
+    <div id="resultado"></div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversor Monetario Simple</title>
+</head>
+<body>
+  <h1>Conversor Monetario</h1>
+
+  <p>Ingrese la cantidad:</p>
+  <input type="number" id="cantidad" placeholder="Cantidad" />
+
+  <p>Convertir:</p>
+  <select id="tipoConversion">
+    <option value="ARStoUSD">Pesos → Dólares</option>
+    <option value="USDtoARS">Dólares → Pesos</option>
+    <option value="ARStoEUR">Pesos → Euros</option>
+    <option value="EURtoARS">Euros → Pesos</option>
+    <option value="ARStoBRL">Pesos → Reales</option>
+    <option value="BRLtoARS">Reales → Pesos</option>
+  </select>
+
+  <button onclick="convertir()">Convertir</button>
+
+  <h2>Resultado:</h2>
+  <div id="resultado"></div>
+
+  <script>
+    
+    const tasaUSD = 1473.75;   
+    const tasaEUR = 1746.40;   
+    const tasaBRL = 270.00;    
+
+    function convertir() {
+      const cantidad = parseFloat(document.getElementById('cantidad').value);
+      const tipo = document.getElementById('tipoConversion').value;
+      let resultado;
+
+      if (isNaN(cantidad)) {
+        resultado = "Ingresa una cantidad válida.";
+      } else {
+        switch(tipo) {
+          case "ARStoUSD":
+            resultado = (cantidad / tasaUSD).toFixed(2) + " USD";
+            break;
+          case "USDtoARS":
+            resultado = (cantidad * tasaUSD).toFixed(2) + " ARS";
+            break;
+          case "ARStoEUR":
+            resultado = (cantidad / tasaEUR).toFixed(2) + " EUR";
+            break;
+          case "EURtoARS":
+            resultado = (cantidad * tasaEUR).toFixed(2) + " ARS";
+            break;
+          case "ARStoBRL":
+            resultado = (cantidad / tasaBRL).toFixed(2) + " BRL";
+            break;
+          case "BRLtoARS":
+            resultado = (cantidad * tasaBRL).toFixed(2) + " ARS";
+            break;
+          default:
+            resultado = "Tipo de conversión no válido.";
+        }
+      }
+
+      document.getElementById('resultado').innerText = resultado;
+    }
+  </script>
+</body>
+</html>

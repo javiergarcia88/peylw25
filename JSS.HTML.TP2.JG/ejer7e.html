@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7e</title>
+    <script>
+        
+        function esPrimo(num) {
+            if (num < 2) return false; 
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        
+        function mostrarPrimos() {
+            let salida = "";
+            for (let i = 2; i < 100; i++) {
+                if (esPrimo(i)) {
+                    salida += i + " ";
+                }
+            }
+            document.getElementById("primos").innerHTML = salida;
+        }
+    </script>
+</head>
+<body onload="mostrarPrimos()">
+    <h1>Números primos menores de 100</h1>
+    <div id="primos"></div>
+</body>
+</html>

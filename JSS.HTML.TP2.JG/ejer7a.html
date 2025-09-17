@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 7a</title>
+    <script>
+        function mostrarMeses() {
+            let meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 
+                         'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+
+            
+            let salida1 = "";
+            for (let i = 0; i < meses.length; i++) {
+                salida1 += `<li>${meses[i]}</li>`;
+            }
+            document.getElementById("listaFor").innerHTML = salida1;
+
+            
+            let salida2 = "";
+            let j = 0;
+            while (j < meses.length) {
+                salida2 += `<li>${meses[j]}</li>`;
+                j++;
+            }
+            document.getElementById("listaWhile").innerHTML = salida2;
+
+            
+            let salida3 = "";
+            let k = 0;
+            do {
+                salida3 += `<li>${meses[k]}</li>`;
+                k++;
+            } while (k < meses.length);
+            document.getElementById("listaDoWhile").innerHTML = salida3;
+
+            
+            let salida4 = "";
+            for (let i in meses) {
+                salida4 += `<li>${meses[i]}</li>`;
+            }
+            document.getElementById("listaForIn").innerHTML = salida4;
+        }
+    </script>
+</head>
+<body onload="mostrarMeses()">
+    <h1>Meses del año</h1>
+    <h2> for</h2>
+    <ul id="listaFor"></ul>
+
+    <h2> while</h2>
+    <ul id="listaWhile"></ul>
+
+    <h2> do while</h2>
+    <ul id="listaDoWhile"></ul>
+
+    <h2>for in</h2>
+    <ul id="listaForIn"></ul>
+</body>
+</html>

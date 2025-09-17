@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+        let n1 = prompt("Ingrese el primer numero:");
+        let n2 = prompt("Ingrese el segundo numero:");
+    </script>
+
+    <h1>Calculadora:</h1>
+
+    <button onclick="suma(n1,n2)">Sumar</button>
+    <button onclick="resta(n1,n2)">Resta</button>
+    <button onclick="multi(n1,n2)">Multiplicar</button>
+    <button onclick="divi(n1,n2)">Dividir</button>
+    <button onclick="pote(n1,n2)">Potencia</button>
+    <button onclick="cuadra(n1)">Cuadrado (n1)</button>
+
+    <h2>Resultados:</h2>
+    <textarea id="resultados"></textarea>
+
+    <script>
+        function suma(n1,n2){
+            var salida=document.getElementById('resultados');
+            var sum = parseInt(n1) + parseInt(n2);
+            salida.value = sum;
+        }
+
+        function resta(n1,n2){
+            var salida=document.getElementById('resultados');
+            var res = parseInt(n1) - parseInt(n2);
+            salida.value = res;
+        }
+
+        function multi(n1,n2){
+            var salida=document.getElementById('resultados');
+            var mul = parseInt(n1) * parseInt(n2);
+            salida.value = mul;
+        }
+
+        function divi(n1,n2){
+            var salida=document.getElementById('resultados');
+            if(parseInt(n2) === 0){
+                salida.value = "No se puede dividir entre cero";
+            } else {
+                var div = parseInt(n1) / parseInt(n2);
+                salida.value = div;
+            }
+        }
+
+        function pote(n1,n2){
+            var salida=document.getElementById('resultados');
+            var pot = Math.pow(parseInt(n1), parseInt(n2));
+            salida.value = pot;
+        }
+
+        function cuadra(n1){
+            var salida=document.getElementById('resultados');
+            var cuad = parseInt(n1) * parseInt(n1);
+            salida.value = cuad;
+        }
+    </script>
+</body>
+</html>
